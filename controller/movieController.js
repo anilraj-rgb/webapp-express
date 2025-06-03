@@ -35,7 +35,7 @@ function show(req, res) {
 
     const sqlMovie = `
     SELECT
-    movies.*,
+    movies.,
         AVG(reviews.vote) AS avg_vote
     FROM
     movies
@@ -127,7 +127,7 @@ function reviewStore(req, res) {
 
         res.status(201).json({
             message: "Movie saved successfully",
-            movieId: result.insertId
+            
         });
     });
 }
